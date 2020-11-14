@@ -12,7 +12,7 @@ gem 'sqlite3' # https://github.com/sparklemotion/sqlite3-ruby
 # Use Puma as the app server
 gem 'puma', '~> 5.0', '>= 5.0.2' # https://github.com/puma/puma
 # Minimal, modern embedded V8 for Ruby
-# See https://github.com/rails/execjs#readme for more supported runtimes
+# See https://github.com/rails/execjs#readme forrailös more supported runtimes
 gem 'mini_racer', platforms: :ruby # https://github.com/rubyjs/mini_racer
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false # https://github.com/Shopify/bootsnap
