@@ -21,4 +21,8 @@ describe "New author", type: :model do
         expect(@author.homepage).to eq("https://en.wikipedia.org/wiki/Flight_of_the_Conchords")
     end
 
+    it "name should consist of first and last name" do
+        expect(@author.name).to eq("Bret McKenzie")
+    end
+
 end
