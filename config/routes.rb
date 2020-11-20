@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get '/author/new', to: 'author#new'
+  get '/new_author' , to: 'author#new'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
