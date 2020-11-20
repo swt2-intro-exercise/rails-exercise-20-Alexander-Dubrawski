@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 describe "New author page", type: :feature do
+    before(:each) do
+        @author = Author.new(first_name: "Bret",last_name: "McKenzie", homepage: "https://en.wikipedia.org/wiki/Flight_of_the_Conchords")
+    end
  
     it "should render withour error" do
         visit new_author_path
