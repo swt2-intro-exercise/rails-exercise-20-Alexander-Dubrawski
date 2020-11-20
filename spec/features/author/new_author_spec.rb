@@ -23,4 +23,17 @@ describe "New author page", type: :feature do
         expect(Author.count).to eq(1)
     end 
 
+
+    it "should not create new invalid author" do 
+        visit new_author_path
+        page.fill_in 'author[first_name]', with: 'Bret'
+        page.fill_in 'author[last_name]', with: ''
+        page.fill_in 'author[homepage]', with: 'https://en.wikipedia.org/wiki/Flight_of_the_Conchords'
+        find('input[type="submit"]').click
+
+        expect(page).to have_content("error")
+
+        expect(Author.count).to eq(1)
+    end 
+
 end
