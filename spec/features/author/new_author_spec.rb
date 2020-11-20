@@ -31,9 +31,9 @@ describe "New author page", type: :feature do
         page.fill_in 'author[homepage]', with: 'https://en.wikipedia.org/wiki/Flight_of_the_Conchords'
         find('input[type="submit"]').click
 
-        expect(page).to have_content("error")
+        expect(page).to have_selector(:id, 'error_explanation')
 
-        expect(Author.count).to eq(1)
+        expect(Author.count).to eq(0)
     end 
 
 end
