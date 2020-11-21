@@ -17,4 +17,6 @@ describe "Index author page", type: :feature do
         # expect(page).to have_text("Clement")
         # expect(page).to have_text("flight_of_the_conchords.com")
     end
+
+    # Todo add test for deleting author
 end
