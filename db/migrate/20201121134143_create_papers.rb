@@ -4,7 +4,6 @@ class CreatePapers < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :venue
       t.integer :year
-
       t.timestamps
     end
   end
