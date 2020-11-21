@@ -19,6 +19,10 @@ describe "New paper", type: :model do
         expect(lord_of_the_rings.year).to eq(1954)
     end
 
+    it "should have empty list of authors" do
+        expect(lord_of_the_rings.authors).to be_empty
+    end
+
     it "should not be valid without title" do
         notValidPaper = Paper.new(title: "", venue: "middle_earth", year: 1954)
         expect(notValidPaper).to_not be_valid
