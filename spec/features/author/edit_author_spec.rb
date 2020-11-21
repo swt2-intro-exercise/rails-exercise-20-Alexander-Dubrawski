@@ -4,7 +4,7 @@ describe "Edit author page", type: :feature do
     let(:jemaine) { create(:author) }
 
     it "should render without error" do
-        visit edit_author_path
+        visit edit_author_path(jemaine)
     end
 
     it "should update author" do
@@ -18,5 +18,4 @@ describe "Edit author page", type: :feature do
         expect(jemaine.last_name).to eq('McKenzie')
         expect(jemaine.homepage).to eq('https://en.wikipedia.org/wiki/Flight_of_the_Conchords')
     end
-
 end
