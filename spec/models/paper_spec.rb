@@ -4,7 +4,7 @@ require 'rails_helper'
 #   pending "add some examples to (or delete) #{__FILE__}"
 # end
 
-describe "New author", type: :model do
+describe "New paper", type: :model do
     let(:lord_of_the_rings) { create(:paper) }
 
     it "title should be present" do

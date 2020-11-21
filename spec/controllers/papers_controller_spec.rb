@@ -98,14 +98,16 @@ RSpec.describe PapersController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {title: 'the_hobbit'}
       }
 
       it "updates the requested paper" do
         paper = Paper.create! valid_attributes
         put :update, params: {id: paper.to_param, paper: new_attributes}, session: valid_session
         paper.reload
-        skip("Add assertions for updated state")
+        expect(paper.title).to eq('the_hobbit')
+        expect(paper.venue).to eq('middle_earth')
+        expect(paper.year).to eq(1954)
       end
 
       it "redirects to the paper" do
