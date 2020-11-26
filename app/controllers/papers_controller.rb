@@ -32,7 +32,6 @@ class PapersController < ApplicationController
 
   # PATCH/PUT /papers/1
   def update
-    byebug
     if @paper.update(paper_params)
       redirect_to @paper, notice: 'Paper was successfully updated.'
     else
